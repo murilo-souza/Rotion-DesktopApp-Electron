@@ -32,7 +32,7 @@ export function Document() {
       });
     },
     {
-      onSuccess: (_, {title, content}) => {
+      onSuccess: (_, {title}) => {
         queryClient.setQueryData<IPCDocument[]>(["documents"], (documents) => {
           return documents?.map((document) => {
             if (document.id === id) {
